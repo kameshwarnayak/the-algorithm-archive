@@ -48,4 +48,4 @@ const result = search(arr, target);
 
 (result === -1) ? 
     console.log(`Target ${target} not present in the array`):
-    console.log(`Target ${target} present in position ${result}`);
+    console.log(`Target ${target} present in position ${result + 1}`);
