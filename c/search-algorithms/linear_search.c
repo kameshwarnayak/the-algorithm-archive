@@ -30,7 +30,7 @@
  * Time Complexity:
  *     Worst-case performance:	     O(n)
  *     Best-case performance:	     O(1)
- *     Average performance:	         O(n)
+ *     Average performance:          O(n)
  */
 
 int search(int arr[], int size, int target) {
