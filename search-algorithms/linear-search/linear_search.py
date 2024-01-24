@@ -1,8 +1,8 @@
 ##########
-# File:        linear_search.js
+# File:        linear_search.py
 #
 # Description:  This file contains the implementation of a linear search algorithm
-#               in Javascript, showcasing a simple and straightforward approach to searching
+#               in Python, showcasing a simple and straightforward approach to searching
 #               for a target element in an array.
 #
 # Author:      Kameshwar Nayak
