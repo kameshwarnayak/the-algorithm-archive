@@ -1,14 +1,13 @@
 /*
- * File:        linear_search.js
+ * File:        sentinel_linear_search.js
  *
- * Description:  This file contains the implementation of a linear search algorithm
- *               in Javascript, showcasing a simple and straightforward approach to searching
- *               for a target element in an array.
+ * Description:  This file contains the implementation of a sentinel linear search algorithm
+ *               in Javascript.
  *
  * Author:      Kameshwar Nayak
  * Affiliation: Panorbit
  *
- * Date:        January 23, 2024
+ * Date:        January 31, 2024
  *
  * Copyright (c) [2024] Kameshwar Nayak
  *
@@ -18,12 +17,12 @@
  */
 
 /*
- * Linear Search Algorithm:
+ * Sentinel Linear Search Algorithm:
  *     Given a list L of n elements with values or records L0 .... Ln−1, and target value T, the following subroutine uses linear search to find the index of the target T in L.[3]
  *         1. Set i to 0.
- *         2. If Li = T, the search terminates successfully; return i.
- *         3. Increase i by 1.
- *         4. If i < n, go to step 2. Otherwise, the search terminates unsuccessfully.
+ *         2. If Li = T, go to step 4.
+ *         3. Increase i by 1 and go to step 2.
+ *         4. If i < n, the search terminates successfully; return i. Else, the search terminates unsuccessfully.
  *
  * Time Complexity:
  *     Worst-case performance:	     O(n)
@@ -32,10 +31,15 @@
  */
 
 const search = (arr, target) => {
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === target) {
-      return i;
-    }
+  let length = arr.length;
+  let last = arr[length];
+  arr[length] = target;
+  let i = 0;
+  while (arr[i] !== target) {
+    i++;
+  }
+  if (last == target || i < length) {
+    return i;
   }
   return -1;
 };
