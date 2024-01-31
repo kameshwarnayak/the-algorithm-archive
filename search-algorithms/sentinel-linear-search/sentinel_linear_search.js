@@ -32,13 +32,13 @@
 
 const search = (arr, target) => {
   let length = arr.length;
-  let last = arr[length];
-  arr[length] = target;
+  let last = arr[length - 1];
+  arr[length - 1] = target;
   let i = 0;
   while (arr[i] !== target) {
-    i++;
+    i += 1;
   }
-  if (last == target || i < length) {
+  if (last == target || i < length - 1) {
     return i;
   }
   return -1;
