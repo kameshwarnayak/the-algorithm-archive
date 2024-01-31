@@ -3,5 +3,5 @@ Search algorithms are methods or procedures used to find a particular item or el
 
 ### Common Search Algorithms
 - [Linear Search](https://github.com/kameshwarnayak/the-algorithm-archive/tree/main/search-algorithms/linear-search)
-- [Sentinel Linear Search] (https://github.com/kameshwarnayak/the-algorithm-archive/tree/main/search-algorithms/sentinel-linear-search)
+- [Sentinel Linear Search](https://github.com/kameshwarnayak/the-algorithm-archive/tree/main/search-algorithms/sentinel-linear-search)
 - Binary Search
