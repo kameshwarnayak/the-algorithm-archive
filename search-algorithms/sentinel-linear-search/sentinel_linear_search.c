@@ -1,8 +1,8 @@
 /*
- * File:        sentinel_linear_search.js
+ * File:        sentinel_linear_search.c
  *
  * Description:  This file contains the implementation of a sentinel linear search algorithm
- *               in Javascript.
+ *               in C.
  *
  * Author:      Kameshwar Nayak
  * Affiliation: Panorbit
@@ -15,6 +15,8 @@
  *              (See accompanying LICENSE file or visit
  *               https://www.gnu.org/licenses/gpl-3.0.html)
  */
+
+#include <stdio.h>
 
 /*
  * Sentinel Linear Search Algorithm:
@@ -30,25 +32,29 @@
  *     Average performance:          O(n)
  */
 
-const search = (arr, target) => {
-  let length = arr.length;
-  let last = arr[length - 1];
-  arr[length - 1] = target;
-  let i = 0;
-  while (arr[i] !== target) {
-    i += 1;
-  }
-  if (last == target || i < length - 1) {
-    return i;
-  }
-  return -1;
-};
+int search(int arr[], int size, int target) {
+    int last = arr[size - 1];
+    arr[size - 1] = target;
+    int i = 0;
+    while ( arr[i] != target ){
+        i++;
+    }
 
-let arr = [12, 6, 55, 2, 44, 87, 100];
-let target = 12;
+    if ( last == target || i < size - 1 ){
+        return i;
+    }
+    return -1;
+}
 
-const result = search(arr, target);
+int main() {
+    int arr[] = { 12, 6, 55, 2, 44, 87, 100 };
+    int target = 100;
+    int length = sizeof(arr) / sizeof(arr[0]);
 
-result === -1
-  ? console.log(`Target ${target} not present in the array`)
-  : console.log(`Target ${target} present in position ${result + 1}`);
+    int result = search(arr, length, target);
+    (result == -1) ? \
+        printf("Target %d not present in the array\n", target) : \
+        printf("Target %d present in position %d\n", target, result + 1);
+
+    return 0;
+}
